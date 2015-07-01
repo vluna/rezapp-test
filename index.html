@@ -1,0 +1,70 @@
+<!doctype html> <html class="no-js"> <head> <meta charset="utf-8"> <title></title> <meta name="description" content=""> <meta name="viewport" content="width=device-width"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/vendor.d83d77a6.css"> <link rel="stylesheet" href="styles/main.aaa525a9.css">  <body ng-app="testApp" ng-controller="AboutCtrl"> <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]--> <!-- Add your site or application content here --> <!--     <div class="container">
+      <md-content class="navbar-default navbar-fixed-top">
+        <md-toolbar>
+          <div class="md-toolbar-tools">
+            <md-button class="md-icon-button" aria-label="Settings">
+              <md-icon md-svg-icon class="glyphicon glyphicon-th-list" ng-click="toggleLeft()" hide-gt-md style="font-size: 20px;"></md-icon>
+            </md-button>
+            <h2>
+              <span>ResLife</span>
+            </h2>
+            <span flex></span>
+          </div>
+        </md-toolbar>
+      </md-content>
+
+      <div layout="column" style="height:auto;">
+        <section layout="row" flex ng-controller="LeftCtrl">
+          <md-sidenav style="z-index: 9999;" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+            <md-toolbar class="md-theme-indigo">
+              <h1 class="md-toolbar-tools"> Menu <i class="glyphicon glyphicon-remove closeIcon"  ng-click="close()"></i></h1>
+            </md-toolbar>
+            <md-content layout-padding>
+              <a ng-href="#/main"> <h4 class="menuList"> <i class="glyphicon glyphicon-list-alt menuIcon"></i> Events </h4></a>
+              <a ng-href="#/announcement" ng-click="close()"><h4 class="menuList"> <i class="glyphicon glyphicon-bullhorn menuIcon"></i> Announcements </h4></a>
+              <a ng-href="#/about"><h4 onClick="close()" class="menuList"> <i class="glyphicon glyphicon-calendar menuIcon"></i> Calendar </h4></a>
+              <a ng-href="#/todo"><h4 ng-click="close()" class="menuList"> <i class="glyphicon glyphicon-ok menuIcon"></i> To-Do List </h4></a>
+              <a ng-href="#/contact"><h4 ng-click="close()" class="menuList"> <i class="glyphicon glyphicon-earphone menuIcon"></i> ResLife Contact </h4></a>
+            </md-content>
+          </md-sidenav>  
+        </section>
+        <div ng-view=""></div>
+      </div>
+    </div> --> <div class="navbar-default navbar-fixed-top"> <div class="navbar-header text-center"> <h4>ResLife</h4> </div> </div> <div ng-view=""></div> <div class="navBorder"> <div class="navbar-inverse navbar-fixed-bottom"> <div class="row"> <div class="col-border col-xs-3 text-center" id="navActive"> <a ng-href="#/"><i class="glyphicon glyphicon-list-alt menuIcon" style="padding-left: 12px"></i></a> </div> <div class="col-border col-xs-3 text-center" id="navActive2"> <a ng-href="#/announcement"><i class="glyphicon glyphicon-bullhorn menuIcon"></i></a> </div> <div class="col-border col-xs-3 text-center" id="navActive3"> <a ng-href="#/calendar"><i class="glyphicon glyphicon-calendar menuIcon"></i></a> </div> <div class="col-border col-xs-3 text-center" id="navActive4"> <a ng-href="#/contact"><i class="glyphicon glyphicon-earphone menuIcon" style="padding-right: 12px"></i></a> </div> </div> </div> </div> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID --> <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');</script> <!--[if lt IE 9]>
+    <script src="scripts/oldieshim.9ea1d182.js"></script>
+    <![endif]--> <script src="scripts/vendor.e5d36966.js"></script> <script src="scripts/scripts.ee9dd48f.js"></script> <script type="text/javascript">$("#navActive").click(function(){
+            document.getElementById("navActive").style.background="#4C88BF";
+            document.getElementById("navActive2").style.background="#a9a9a9";
+            document.getElementById("navActive3").style.background="#a9a9a9";
+            document.getElementById("navActive4").style.background="#a9a9a9";
+          })
+
+          $("#navActive2").click(function(){
+            document.getElementById("navActive").style.background="#a9a9a9";
+            document.getElementById("navActive2").style.background="#4C88BF";
+            document.getElementById("navActive3").style.background="#a9a9a9";
+            document.getElementById("navActive4").style.background="#a9a9a9";
+
+          })
+
+          $("#navActive3").click(function(){
+            document.getElementById("navActive").style.background="#a9a9a9";
+            document.getElementById("navActive2").style.background="#a9a9a9";
+            document.getElementById("navActive3").style.background="#4C88BF";
+            document.getElementById("navActive4").style.background="#a9a9a9";
+          })
+
+          $("#navActive4").click(function(){
+            document.getElementById("navActive").style.background="#a9a9a9";
+            document.getElementById("navActive2").style.background="#a9a9a9";
+            document.getElementById("navActive3").style.background="#a9a9a9";
+            document.getElementById("navActive4").style.background="#4C88BF";
+          })</script>  
